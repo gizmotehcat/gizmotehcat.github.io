@@ -1,0 +1,253 @@
+/* reset all styles */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/*----------------------------------------universal styles---------------------------------------- */
+@font-face {
+    font-family:'Gamma Orionis';
+    src: url("font/GammaOrionis.otf") format("opentype");
+}
+
+@font-face {
+    font-family: spacewham;
+    src: url("font/space-wham.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'corbel-light' ;
+    src: url("font/corbel-light.ttf") format("truetype");
+}
+
+body{
+    background-color: rgb(19, 3, 44);
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;   
+    background-image: linear-gradient(transparent 30%, rgba(21, 6, 45,.8) 30%);
+    background-size: 5px 5px;    
+}
+
+.grid_container{
+    display: grid;
+    grid-template-columns: 8% 84% 8%;
+    grid-template-rows: 90vh 10vh;
+    gap: 0px 0px;
+    grid-template-areas:
+        "header main nav"
+        "header footer nav";
+}
+
+p {
+    font-family:'corbel-light';
+    font-weight: 400; 
+    letter-spacing: 1px;
+    line-height: 1.2;
+    font-size: 0.9em;
+}
+
+h2 {
+    font-family:'Gamma Orionis';
+    font-weight: 400;   
+    letter-spacing: 3px;
+}
+
+h3 { 
+    font-family:'Gamma Orionis';
+    font-weight: 400;   
+    letter-spacing: 1px;
+    background-color: rgb(255,255,255);
+    color: rgb(20, 6, 43);
+    padding-left: 3px;
+    display: inline-block;
+}
+
+.nav_elevator{
+    font-size: 1.5em;
+    font-family: spacewham;
+}
+
+.underline{
+    border-bottom: 2px solid rgb(218, 64, 23);
+}
+
+
+/*----------------------------------------header styles---------------------------------------- */
+header {
+    grid-area: header;
+    border-right: 2px solid rgb(64, 51, 83);
+    display: flex;
+    font-size: 3em;
+}
+
+.header_container {
+    width: 50%;
+    margin: 50px auto 0 auto;
+}
+
+.header_container h2{
+    margin-bottom: 30px;
+}
+
+.vertical_class{
+    writing-mode: vertical-rl;
+    float:right;
+}
+
+.pb_class{
+    color: rgb(31, 15, 76);
+}
+
+/*----------------------------------------main styles---------------------------------------- */
+main {
+    grid-area: main;
+    display: flex;
+}
+
+
+/*---------------------- welcome wrapper page -------------- */
+.welcome_wrapper {
+    width: 70%;
+    display:inline-block;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 40% 60% ;
+    grid-template-rows: 30% 20% 50% ;
+    gap: 0px 0px;
+    grid-template-areas:
+        "title title"
+        "subtitle img "
+        "content img "
+}
+
+.welcome_title_wrapper{
+    grid-area: title;
+    font-size: 4em;
+}
+
+.welcome_subtitle_wrapper{
+    grid-area: subtitle;
+    font-size: 1.7em;
+    align-self: center;
+}
+
+.welcome_content_wrapper{
+    grid-area: content;
+    padding-top: 40px;
+}
+
+.welcome_image_wrapper{
+    grid-area: img;
+    justify-self: center;
+}
+
+.welcome_image_wrapper img{
+    border-radius: 100%;
+    width: 180px;
+    height: 180px;
+    opacity: 0.5;
+}
+
+.welcome_image_wrapper img:hover{
+    opacity: 1;
+}
+
+
+/*----------------------------------------nav styles---------------------------------------- */
+nav {
+    grid-area: nav;
+    text-align: center;
+    display: flex;
+}
+
+nav ul {
+    margin: 50px auto 0 auto;
+}
+
+nav ul li{
+    margin-bottom: 100px;
+    color: rgb(36, 19, 93);
+}
+
+.ele_active{
+    color: rgb(255,255,255);
+}
+
+li a:hover{
+    color:rgb(55, 29, 141);
+    cursor: pointer;
+}
+
+
+/*----------------------------------------footer styles---------------------------------------- */
+footer {
+    color: rgb(36, 19, 93);
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+footer div{
+    padding-left: 15px;
+    width:10%;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer a, footer i{
+    margin: auto 0 ;
+}
+
+.fas:hover , .fab:hover, footer a:hover {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
